@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e38764d.css",
+    "main.css": "/static/css/main.28895d77.css",
     "main.js": "/static/js/main.52470442.js",
     "static/media/profilePic.jpeg": "/static/media/profilePic.54744f2e849856f8e7cf.jpeg",
     "static/media/GatorEsportsLogo.png": "/static/media/GatorEsportsLogo.a3ff8e86ba33602128d6.png",
@@ -10,11 +10,11 @@
     "static/media/DMlogo.png": "/static/media/DMlogo.39d61727bf50ce12012a.png",
     "static/media/Horizon-nMeM.ttf": "/static/media/Horizon-nMeM.6cf9cd946e0f108988ed.ttf",
     "index.html": "/index.html",
-    "main.2e38764d.css.map": "/static/css/main.2e38764d.css.map",
+    "main.28895d77.css.map": "/static/css/main.28895d77.css.map",
     "main.52470442.js.map": "/static/js/main.52470442.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e38764d.css",
+    "static/css/main.28895d77.css",
     "static/js/main.52470442.js"
   ]
 }
