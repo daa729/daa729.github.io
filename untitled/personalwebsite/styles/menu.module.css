@@ -1,0 +1,61 @@
+/* src/styles/menu.module.css */
+.menu {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li {
+    margin-bottom: 0.5rem;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.menu a:hover {
+    color: #ddd;
+    border-color: #555;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu {
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .menu ul {
+        flex-direction: row;
+    }
+
+    .menu li {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    }
+
+    .menu a {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+}

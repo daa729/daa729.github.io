@@ -1,0 +1,20 @@
+/* src/styles/hard.module.css */
+.loki {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.letter {
+    font-size: 2rem;
+    margin: 0.1rem;
+    flex: 1 0 auto;
+}
+
+@media (max-width: 768px) {
+    .letter {
+        font-size: 1.5rem;
+    }
+}
