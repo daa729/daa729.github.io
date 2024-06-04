@@ -89,5 +89,7 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
+        env: 
+          NEXT_PUBLIC_API_KEY: ${{secrets.NEXT_PUBLIC_API_KEY}}
         id: deployment
         uses: actions/deploy-pages@v4
