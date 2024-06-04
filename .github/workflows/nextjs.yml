@@ -23,8 +23,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-env: 
-          NEXT_PUBLIC_API_KEY: ${{secrets.NEXT_PUBLIC_API_KEY}}
+
 jobs:
   # Build job
   build:
@@ -92,3 +91,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env: 
+          NEXT_PUBLIC_API_KEY: ${{secrets.NEXT_PUBLIC_API_KEY}}
