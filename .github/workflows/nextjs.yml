@@ -31,11 +31,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: 'Create env file'
-        run: |
-          touch .env.local
-          echo NEXT_PUBLIC_API_KEY= ${{secrets.NEXT_PUBLIC_API_KEY}} >> .env.local
-      
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -96,5 +91,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        env: 
+          PUBLIC_NEXT_API_KEY: ${{secrets.NEXT_PUBLIC_API_KEY}}
         
           
