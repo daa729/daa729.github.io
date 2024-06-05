@@ -61,7 +61,7 @@ const getRepoOwnerAndName = (url: string) => {
 
 export default function Home() {
     const [repositories, setRepositories] = useState<Repository[]>([]);
-    console.log(process.env);
+
     useEffect(() => {
         const fetchRepositories = async () => {
             try {

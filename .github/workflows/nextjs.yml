@@ -34,9 +34,8 @@ jobs:
       - name: 'Create env file'
         run: |
           touch .env.local
-          echo NEXT_PUBLIC_API_KEY=${{secrets.NEXT_PUBLIC_API_KEY}} >> .env
-          
-          cat .env
+          echo NEXT_PUBLIC_API_KEY= ${{secrets.NEXT_PUBLIC_API_KEY}} >> .env.local
+      
       - name: Detect package manager
         id: detect-package-manager
         run: |
