@@ -92,7 +92,7 @@ export default function Home() {
     };
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-6" style={{ backgroundColor: "#000", color: "#fff" }}>
+        <main className="flex min-h-screen flex-col items-center justify-between p-6" style={{ backgroundColor: "#111", color: "#fff" }}>
             <div className="Loki">
                 <Hard text={"Projects"} />
             </div>

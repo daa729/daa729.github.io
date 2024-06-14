@@ -1,6 +1,7 @@
 "use client"
 import { Fragment, useState } from "react";
 import Hard from "../Assets/LokiTitle.jsx";
+import {link} from "node:fs";
 
 // Define the props interface for the Card component
 interface CardProps {
@@ -9,9 +10,10 @@ interface CardProps {
     years: string;
     description: string;
     image: string;
+    link?: string;
 }
 
-function Card({ company, title, years, description, image }: CardProps) {
+function Card({ company, title, years, description, image,link }: CardProps) {
     const [flipped, setFlipped] = useState(false);
 
     return (
@@ -28,6 +30,9 @@ function Card({ company, title, years, description, image }: CardProps) {
                     <div className="card-content">
                         <p>{years}</p>
                         <p>{description}</p>
+                        {link && (
+                            <a href={link} target="_blank" rel="noopener noreferrer">Find out More!</a>
+                        )}
                     </div>
                 </div>
             </div>
@@ -106,7 +111,8 @@ export default function Home() {
             title: "Research Assistant",
             years: "Aug 2021 - Present",
             description: "Development of 5+ Unity applications utilizing Vive Pro Eye, Meta VR API's and Chat Gpt integration.",
-            image: "https://dcp.ufl.edu/rinker/wp-content/uploads/sites/40/2021/09/FullColor_RinkerSeal-1.png"
+            image: "https://dcp.ufl.edu/rinker/wp-content/uploads/sites/40/2021/09/FullColor_RinkerSeal-1.png",
+            link: "/RinkerLab"
         },
         {
             company: "UF Esports Club",
@@ -153,7 +159,7 @@ export default function Home() {
     ];
 
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24" style={{ backgroundColor: "#000", color: "#fff" }}>
+        <main className="flex min-h-screen flex-col items-center justify-between p-24" style={{ backgroundColor: "#111", color: "#fff" }}>
             <Hard text="Experience" />
             <div className="cards-container">
                 {experienceData.map((exp, index) => (
@@ -164,6 +170,7 @@ export default function Home() {
                         years={exp.years}
                         description={exp.description}
                         image={exp.image}
+                        link={exp.link}
                     />
                 ))}
             </div>

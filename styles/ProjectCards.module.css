@@ -1,0 +1,50 @@
+/* components/ProjectCards.module.css */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 16px;
+    justify-content: center;
+    padding: 16px; /* Add padding around the container */
+}
+
+.card {
+    background: black; /* Set the background to black */
+    color: white; /* Set the text color to white */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 100%; /* Make the card take full width of the column */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    text-decoration: underline; /* Underline the title */
+}
+
+.card p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.card a {
+    color: #1e90ff; /* Use a shade of blue for links */
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.listItem {
+    margin-bottom: 8px;
+}

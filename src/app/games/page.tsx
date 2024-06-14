@@ -63,7 +63,7 @@ function GameCard({ src, width, height, fallbackText }: GameCardProps) {
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center " style={{ backgroundColor: "#000", color: "#fff" }}>
+        <main className="flex min-h-screen flex-col items-center " style={{ backgroundColor: "#111", color: "#fff" }}>
             <Hard text="Games" />
             <div className="gap-2 row-auto">
                 <Card>

@@ -31,6 +31,13 @@
     transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 }
 
+.subMenu{
+    border-radius: 0.5rem;
+    border-left-color: transparent;
+    border-left-width: 1rem;
+    border-top-width: 0.25rem;
+    border-top-color: #111;
+}
 .menu a:hover {
     color: #ddd;
     border-color: #555;

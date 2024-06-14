@@ -5,7 +5,7 @@ export default function Home() {
   return (
       <main
           className="flex flex-col items-center justify-between p-24"
-          style={{ backgroundColor: "#000", color: "#fff" }}
+          style={{ backgroundColor: "#111", color: "#fff" }}
       >
         <div className="flex bio-container">
           <Image
@@ -97,7 +97,7 @@ export default function Home() {
             margin-bottom: 1.5rem; /* Increased bottom margin for more spacing between paragraphs */
           }
           .email-link {
-            color: #00f;
+            color: #fff;
             text-decoration: underline;
             margin-top: 1rem;
           }
