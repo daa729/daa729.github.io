@@ -93,10 +93,6 @@ jobs:
     env:
       NEXT_PUBLIC_API_KEY: ${{secrets.NEXT_PUBLIC_API_KEY}}
     steps:
-      - name: Download artifact
-        uses: actions/download-pages-artifact@v3
-        with:
-          path: ./out
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
