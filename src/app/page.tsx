@@ -15,19 +15,21 @@ export default function Home() {
               height={300}
               className="profile-image"
           />
-          <div className="bio-text-container">
-            <p className="bio-text">
-              Hi, my name is Anderson. I am a senior from the University of Florida graduating in December 2024.
-            </p>
-            <p className="bio-text">
-              Originally a computer science major focused on game design, my interests have evolved to include all sorts of 3D applications and UX design.
-            </p>
-            <p className="bio-text">
-              I have completed a variety of projects in both my free time and in the course of my positions and would be eager to discuss them in more detail at any time.
-            </p>
-            <a href="mailto:daa729@gmail.com" className="email-link">daa729@gmail.com</a>
-          </div>
+         <div className="bio-text-container">
+          <p className="bio-text">
+            Hi, my name is Anderson. I'm a recent Computer Science graduate from the University of Florida with a passion for software engineering, game development, and collegiate esports.
+          </p>
+          <p className="bio-text">
+            My experience spans from developing high-fidelity Unity simulations in academic research to leading esports initiatives, including roles as President of UF Club Esports and an Esports Intern at UF RecSports. I'm proficient with technologies such as Unity, Blender, AWS, and enjoy creating engaging user experiences through thoughtful design and robust programming.
+          </p>
+          <p className="bio-text">
+            I'm eager to apply my technical skills and leadership experience to innovative projects and collaborative teams.
+          </p>
+          <a href="mailto:daa729@gmail.com" className="email-link">
+            daa729@gmail.com
+          </a>
         </div>
+      </div>
 
         <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
           <a
