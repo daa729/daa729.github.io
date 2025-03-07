@@ -16,17 +16,17 @@ export default function Home() {
           Software Engineer | Unity Developer | Game Dev &amp; Esports Advocate
         </p>
         <div className="mt-4 flex justify-center gap-4">
-          <a 
-            href="https://www.linkedin.com/in/dandersonallen" 
-            target="_blank" 
+          <a
+            href="https://www.linkedin.com/in/dandersonallen"
+            target="_blank"
             rel="noopener noreferrer"
             className="underline"
           >
             LinkedIn
           </a>
-          <a 
-            href="https://github.com/daa729" 
-            target="_blank" 
+          <a
+            href="https://github.com/daa729"
+            target="_blank"
             rel="noopener noreferrer"
             className="underline"
           >
@@ -37,7 +37,7 @@ export default function Home() {
       <main className="flex flex-col items-center p-8">
         <section className="flex flex-col md:flex-row items-center gap-8">
           <Image
-            src="/IMG_1471.jpg"  // Make sure this image is in your public folder
+            src="/IMG_1471.jpg" // Ensure this image is in your public folder
             alt="Profile Picture"
             width={300}
             height={300}
@@ -47,21 +47,48 @@ export default function Home() {
             <p className="mb-4">
               {"Hi, I'm Anderson—a recent Computer Science graduate from the University of Florida. I specialize in software engineering, game development, and collegiate esports."}
             </p>
+            <p className="mb-4">
+              {"With a strong foundation in both traditional software engineering and the dynamic world of game development, I have embraced roles that demand leadership, creativity, and technical expertise. My experiences range from developing interactive simulations in Unity to coordinating esports events and crafting innovative software solutions."}
+            </p>
             <p>
-              I enjoy building interactive experiences and innovative applications. Explore my work below.
+              Explore my work below and download my resumes for more details.
             </p>
           </div>
         </section>
-        <nav className="mt-8 flex gap-6">
+        {/* Primary Navigation Row */}
+        <nav className="mt-8 flex flex-wrap gap-6 justify-center">
           <Link href="/experience">
-            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700">Experience</p>
+            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700 cursor-pointer">
+              Experience
+            </p>
           </Link>
           <Link href="/projects">
-            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700">Projects</p>
+            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700 cursor-pointer">
+              Projects
+            </p>
           </Link>
           <Link href="/games">
-            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700">Games</p>
+            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700 cursor-pointer">
+              Games
+            </p>
           </Link>
+        </nav>
+        {/* Resume Links Row */}
+        <nav className="mt-4 flex flex-wrap gap-6 justify-center">
+          <a
+            href="/Allen_Esports.pdf"
+            download
+            className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700 underline"
+          >
+            Esports Resume
+          </a>
+          <a
+            href="/Allen_Software.pdf"
+            download
+            className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700 underline"
+          >
+            Software Engineering Resume
+          </a>
         </nav>
       </main>
       <footer className="py-6 text-center">
