@@ -45,7 +45,7 @@ export default function Home() {
           />
           <div className="max-w-lg text-gray-300">
             <p className="mb-4">
-              Hi, I'm Anderson—a recent Computer Science graduate from the University of Florida. I specialize in software engineering, game development, and collegiate esports.
+              "Hi, I'm Anderson—a recent Computer Science graduate from the University of Florida. I specialize in software engineering, game development, and collegiate esports."
             </p>
             <p>
               I enjoy building interactive experiences and innovative applications. Explore my work below.

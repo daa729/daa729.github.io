@@ -62,7 +62,7 @@ export default function Resume() {
             <h3 className="text-xl font-semibold">J. Wayne Reitz Union – Esports Consultant</h3>
             <p className="text-sm">January 2025 – Present | Gainesville, Florida, United States</p>
             <ul className="list-disc list-inside mt-2">
-              <li>Developed policies, guidelines, and objectives for Reitz Union's Esports Space.</li>
+              <li>"Developed policies, guidelines, and objectives for Reitz Union's Esports Space."</li>
               <li>Researched similar programs to ensure a successful launch of the new Esports Space.</li>
             </ul>
           </article>
