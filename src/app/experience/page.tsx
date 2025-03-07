@@ -1,7 +1,10 @@
-// pages/experience.tsx
-import Head from 'next/head';
-import Link from 'next/link';
-import Hard from '../Assets/LokiTitle.jsx';
+// src/app/experience/page.tsx
+"use client";
+
+import Head from "next/head";
+import Link from "next/link";
+import Hard from "../Assets/LokiTitle.jsx";
+import Image from "next/image";
 
 type Experience = {
   company: string;
@@ -18,7 +21,7 @@ const experiences: Experience[] = [
     title: "Esports Consultant",
     years: "Jan 2025 – Present",
     description:
-      "Developed policies and guidelines for Reitz Union's Esports Space and researched similar programs for a successful launch.",
+      "Developed policies and guidelines for Reitz Union&apos;s Esports Space and researched similar programs for a successful launch.",
     image: "/images/reitz-logo.png", // update with your actual image path
   },
   {
@@ -30,7 +33,7 @@ const experiences: Experience[] = [
     image:
       "https://dcp.ufl.edu/rinker/wp-content/uploads/sites/40/2021/09/FullColor_RinkerSeal-1.png",
   },
-  // ...add additional experience entries here
+  // ...additional entries
 ];
 
 export default function ExperiencePage() {
@@ -49,10 +52,12 @@ export default function ExperiencePage() {
             key={idx}
             className="bg-gray-800 rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow"
           >
-            <img
+            <Image
               src={exp.image}
               alt={`${exp.company} logo`}
-              className="w-full h-32 object-contain mb-4"
+              width={300} // Adjust these values as needed
+              height={128}
+              className="object-contain mb-4"
             />
             <h2 className="text-2xl font-semibold">{exp.company}</h2>
             <h3 className="text-xl">{exp.title}</h3>
