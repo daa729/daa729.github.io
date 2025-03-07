@@ -1,121 +1,72 @@
-"use client";
-import Image from "next/image";
+// pages/index.tsx
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-      <main
-          className="flex flex-col items-center justify-between p-24"
-          style={{ backgroundColor: "#111", color: "#fff" }}
-      >
-        <div className="flex bio-container">
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center">
+      <Head>
+        <title>Anderson Allen Portfolio</title>
+        <meta name="description" content="Portfolio of Anderson Allen" />
+      </Head>
+      <header className="w-full py-6 text-center">
+        <h1 className="text-5xl font-bold">Anderson Allen</h1>
+        <p className="mt-2 text-xl">
+          Software Engineer | Unity Developer | Game Dev &amp; Esports Advocate
+        </p>
+        <div className="mt-4 flex justify-center gap-4">
+          <a 
+            href="https://www.linkedin.com/in/dandersonallen" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            LinkedIn
+          </a>
+          <a 
+            href="https://github.com/daa729" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            GitHub
+          </a>
+        </div>
+      </header>
+      <main className="flex flex-col items-center p-8">
+        <section className="flex flex-col md:flex-row items-center gap-8">
           <Image
-              src="/IMG_1471.jpg" // Replace with actual image URL
-              alt="Profile Picture"
-              width={300}
-              height={300}
-              className="profile-image"
+            src="/IMG_1471.jpg"  // Make sure this image is in your public folder
+            alt="Profile Picture"
+            width={300}
+            height={300}
+            className="rounded-full"
           />
-          <div className="bio-text-container">
-            <p className="bio-text">
-              Hi, my name is Anderson. I am a senior from the University of Florida graduating in December 2024.
+          <div className="max-w-lg text-gray-300">
+            <p className="mb-4">
+              Hi, I'm Anderson—a recent Computer Science graduate from the University of Florida. I specialize in software engineering, game development, and collegiate esports.
             </p>
-            <p className="bio-text">
-              Originally a computer science major focused on game design, my interests have evolved to include all sorts of 3D applications and UX design.
+            <p>
+              I enjoy building interactive experiences and innovative applications. Explore my work below.
             </p>
-            <p className="bio-text">
-              I have completed a variety of projects in both my free time and in the course of my positions and would be eager to discuss them in more detail at any time.
-            </p>
-            <a href="mailto:daa729@gmail.com" className="email-link">daa729@gmail.com</a>
           </div>
-        </div>
-
-        <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
-          <a
-              href="/projects"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Projects
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Find out about some of the code I&#39;ve written.
-            </p>
-          </a>
-
-          <a
-              href="/experience"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Experience
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              What other work have I done?
-            </p>
-          </a>
-
-          <a
-              href="/games"
-              className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          >
-            <h2 className="mb-3 text-2xl font-semibold">
-              Games
-              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-            </h2>
-            <p className="m-0 max-w-[30ch] text-sm opacity-50">
-              Play some of the games I&#39;ve made.
-            </p>
-          </a>
-        </div>
-
-        <style jsx>{`
-          .bio-container {
-            margin-bottom: 4rem; /* Increased bottom margin for more spacing */
-            display: flex;
-            align-items: flex-start; /* Align items at the start to avoid stretching */
-            justify-content: center;
-            max-width: 900px;
-            gap: 2rem; /* Added gap between image and text */
-          }
-          .profile-image {
-            border-radius: 50%;
-            margin-right: 2rem;
-          }
-          .bio-text-container {
-            max-width: 500px;
-            color: #ccc;
-          }
-          .bio-text {
-            margin-bottom: 1.5rem; /* Increased bottom margin for more spacing between paragraphs */
-          }
-          .email-link {
-            color: #fff;
-            text-decoration: underline;
-            margin-top: 1rem;
-          }
-          .group {
-            background: #000;
-            border: 1px solid #555;
-            border-radius: 0.5rem;
-            box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            color: #fff;
-            text-decoration: none;
-            margin-bottom: 2rem; /* Added bottom margin for more spacing between groups */
-          }
-          .group:hover {
-            transform: translateY(-0.3125rem);
-            box-shadow: 0 0.375rem 0.9375rem rgba(255, 255, 255, 0.2);
-          }
-        `}</style>
+        </section>
+        <nav className="mt-8 flex gap-6">
+          <Link href="/experience">
+            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700">Experience</p>
+          </Link>
+          <Link href="/projects">
+            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700">Projects</p>
+          </Link>
+          <Link href="/games">
+            <p className="px-4 py-2 bg-gray-800 rounded hover:bg-gray-700">Games</p>
+          </Link>
+        </nav>
       </main>
+      <footer className="py-6 text-center">
+        <p>&copy; {new Date().getFullYear()} Anderson Allen</p>
+      </footer>
+    </div>
   );
 }
