@@ -1,72 +1,52 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
-import styles from "/styles/menu.module.css";
+import type { Metadata, Viewport } from "next";
+import { Barlow, Barlow_Condensed } from "next/font/google";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import "./globals.css";
-import Menu from "./Assets/Menu"; // Import the client-side Menu component
 
-const inter = Inter({ subsets: ["latin"] });
-const quicky = localFont({
-  src:[
-    {
-      path: '/Assets/fonts/quicky-story-font/QuickyStory-8Oa82.otf',
-      weight:'400'
-    }
-  ],
-  variable: '--font-quicky'
+const body = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-body",
 });
-const diaclone = localFont({
-  src:[
-    {
-      path: '/Assets/fonts/dia-clone-font/DiacloneWide-KV7ay.otf',
-      weight:'500'
-    }
-  ],
-  variable: '--font-diaclone'
-});
-const runtoe = localFont({
-  src:[
-    {
-      path: '/Assets/fonts/runtoe-font/Runtoe-R9vKo.otf',
-      weight:'400'
-    }
-  ],
-  variable: '--font-runtoe'
-});
-const superpen = localFont({
-  src:[
-    {
-      path: '/Assets/fonts/super-pencil-font/SuperPencil-ARGw7.ttf',
-      weight:'400'
-    }
-  ],
-  variable: '--font-superpen'
-});
-const youchat = localFont({
-  src:[
-    {
-      path: '/Assets/fonts/youchat-font/Youchat-DYYP9.otf',
-      weight:'400'
-    }
-  ],
-  variable: '--font-youchat'
+
+const display = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
-  title: "Anderson Allen's Portfolio",
-  description: "A Collection of work and experience.",
+  metadataBase: new URL("https://daa729.github.io"),
+  title: {
+    default: "Anderson Allen | Portfolio",
+    template: "%s | Anderson Allen",
+  },
+  description:
+    "Portfolio of Anderson Allen: interactive software engineering, Unity/VR development, and collegiate esports.",
+  openGraph: {
+    title: "Anderson Allen | Portfolio",
+    description: "Interactive software engineering, Unity/VR development, and collegiate esports.",
+    url: "/",
+    siteName: "Anderson Allen",
+    type: "website",
+  },
+  referrer: "strict-origin-when-cross-origin",
 };
 
-export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
-  children: React.ReactNode;
-}>) {
+export const viewport: Viewport = {
+  themeColor: "#0E131B",
+  colorScheme: "dark",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-      <html lang="en">
-      <body className={inter.className}>
-      {children}
+    <html lang="en" className={`${body.variable} ${display.variable}`}>
+      <body className="flex min-h-screen flex-col">
+        <SiteHeader />
+        <main className="flex-1">{children}</main>
+        <SiteFooter />
       </body>
-      </html>
+    </html>
   );
 }

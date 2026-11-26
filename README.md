@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anderson Allen — Portfolio
 
-## Getting Started
+Personal portfolio site, live at **https://daa729.github.io**.
 
-First, run the development server:
+Built with [Next.js](https://nextjs.org/) (App Router, static export) and Tailwind CSS, and deployed to GitHub Pages by
+[`.github/workflows/nextjs.yml`](.github/workflows/nextjs.yml) on every push to `main`.
+
+## Editing content
+
+Most content lives in plain data files, so updates don't require touching layout code:
+
+| What | Where |
+| --- | --- |
+| Work experience | `src/data/experience.ts` |
+| Client work, research projects & featured GitHub repos | `src/data/projects.ts` |
+| Esports page (stats, programs, current work) | `src/data/esports.ts` |
+| Home page bio, highlight stats & skills | `src/app/page.tsx` |
+| Games (itch.io embeds) | `src/app/games/page.tsx` |
+| Photos and logos | `public/` |
+
+## Local development
+
+Requires Node.js 20.9+ (22 recommended).
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run dev     # http://localhost:3000
+npm run lint
+npm run build   # static site written to ./out
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The Projects page fetches language stats for the featured repos from the GitHub API at build time. It works without a
+token; set `GITHUB_TOKEN` locally if you hit the unauthenticated rate limit. In CI the workflow's built-in, short-lived
+`GITHUB_TOKEN` is used — no personal access token or repository secret is needed, and the token never reaches the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Colors and fonts are defined once in `tailwind.config.ts` (ink background, Gator-orange accent) and
+`src/app/layout.tsx` (Barlow / Barlow Condensed). Pages are built from the shared components in `src/components/`
+(`PageShell`, `Entry`, `Facts`), so new content picks up the same styling automatically.
 
-## Learn More
+## Fonts
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The animated page titles use freeware display fonts from FontSpace (licenses in `src/fonts/*/info.txt`).
+Note that Dia Clone asks for a donation for commercial use.

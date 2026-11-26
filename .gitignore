@@ -37,3 +37,15 @@ next-env.d.ts
 
 # node packages 
 node_modules
+
+# editor
+.idea/
+.vscode/
+
+# env files (never commit secrets)
+.env
+.env.*
+!.env.example
+
+# local tooling
+.claude/
