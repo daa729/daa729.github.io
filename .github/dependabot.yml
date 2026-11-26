@@ -1,0 +1,15 @@
+# Weekly update PRs. Workflow actions are pinned to commit SHAs, so Dependabot
+# is what keeps those pins (and npm packages) current.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]

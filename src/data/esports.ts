@@ -89,7 +89,7 @@ export const ongoing: EsportsItem[] = [
     summary: "Continue to advise the UF esports program.",
   },
   {
-    title: "K–12 Esports Product",
+    title: "FEC",
     role: "Builder",
     summary: "Developing a scholastic esports product for K–12 schools, in preparation for DreamHack.",
   },

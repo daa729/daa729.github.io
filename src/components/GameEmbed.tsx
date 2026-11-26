@@ -18,6 +18,8 @@ export default function GameEmbed({ src, title }: { src: string; title: string }
         height="167"
         loading="lazy"
         referrerPolicy="strict-origin-when-cross-origin"
+        // The widget may run scripts and open itch.io in a new tab, but can't navigate this page.
+        sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         onLoad={() => setLoaded(true)}
         className={`block border-0 ${loaded ? "" : "invisible"}`}
       />

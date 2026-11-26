@@ -111,9 +111,9 @@ export const researchProjects: ResearchProject[] = [
       "Two experiments on the safety challenges of co-drones (drones that work alongside people) on construction sites.",
     publications: [
       {
-        title: "Experiment 1",
-        journal: "Automation in Construction",
-        link: "https://www.sciencedirect.com/science/article/pii/S092658052300359X",
+        title: "Physical Risk Assessment of Drone Integration in Construction Using 4D Simulation",
+        journal: "Automation in Construction, Vol. 156",
+        link: "https://doi.org/10.1016/j.autcon.2023.105099",
       },
       {
         title: "Psychophysiological Impacts of Working at Different Distances from Drones on Construction Sites",
@@ -187,24 +187,12 @@ export const featuredRepos = [
       "Programmed a BitTorrent client in Java and used virtual machines to simulate a peer-to-peer download network.",
   },
   {
-    url: "https://github.com/zshenkman/grooveguru",
-    description: "Prototyped an AI music suggestion tool using ChatGPT.",
-  },
-  {
     url: "https://github.com/daa729/AccidentProject",
     description: "Built an accident heat map from public crash data on top of the Google Maps API.",
   },
   {
     url: "https://github.com/Musketeers-CEN/Gator-Round-Up",
     description: "A Flutter club check-in app backed by Firebase and tied to users' Google accounts.",
-  },
-  {
-    url: "https://github.com/daa729/AVLTrees",
-    description: "Practice project building my first AVL tree (a self-balancing search tree).",
-  },
-  {
-    url: "https://github.com/daa729/ProgrammingLangaugeConcepts",
-    description: "Built a custom programming language on top of an existing Java code base.",
   },
   {
     url: "https://github.com/Dance-Marathon/DM-Website",

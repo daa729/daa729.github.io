@@ -29,6 +29,13 @@ npm run lint
 npm run build   # static site written to ./out
 ```
 
+`npm run build` also runs `scripts/fix-export-prefetch.mjs`, which works around a Next.js 16 static-export bug: link
+prefetch files are written as `__next.<route>/__PAGE__.txt` but requested as `__next.<route>.__PAGE__.txt`. Without it,
+every link prefetch 404s on GitHub Pages. The script can go once Next.js exports both names.
+
+When previewing `./out` locally, hard-refresh after a rebuild. A browser holding pages from an older build will fall
+back to full page reloads on navigation, which looks like a bug but isn't one.
+
 The Projects page fetches language stats for the featured repos from the GitHub API at build time. It works without a
 token; set `GITHUB_TOKEN` locally if you hit the unauthenticated rate limit. In CI the workflow's built-in, short-lived
 `GITHUB_TOKEN` is used — no personal access token or repository secret is needed, and the token never reaches the browser.
@@ -43,3 +50,11 @@ Colors and fonts are defined once in `tailwind.config.ts` (ink background, Gator
 
 The animated page titles use freeware display fonts from FontSpace (licenses in `src/fonts/*/info.txt`).
 Note that Dia Clone asks for a donation for commercial use.
+
+The site ships Latin-only WOFF2 subsets (`*.latin.woff2`, about 190 KB total versus about 760 KB for the originals). The
+originals stay in each folder as sources. To regenerate a subset (requires `pip install fonttools brotli`):
+
+```bash
+pyftsubset Font.otf --unicodes="U+0020-007E,U+00A0,U+2013,U+2014,U+2018,U+2019,U+201C,U+201D" \
+  --flavor=woff2 --layout-features='*' --output-file=Font.latin.woff2
+```
