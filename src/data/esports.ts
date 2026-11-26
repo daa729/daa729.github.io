@@ -28,12 +28,12 @@ export const builtAtUF: EsportsItem[] = [
         what: "With two fellow students, petitioned the Reitz Union for a permanent home for gaming on campus.",
       },
       {
-        when: "Planning",
-        what: "Joined the planning committee and helped define the space's scope and goals.",
+        when: "2023 – 2024",
+        what: "As UF Club Esports President, advised the Reitz Union on a gaming space for players of every level, and joined the planning committee to define its scope and goals.",
       },
       {
         when: "Jan – Jun 2025",
-        what: "As Esports Consultant, wrote most of the policies and booking standards and helped plan day-to-day operations.",
+        what: "As Esports Consultant, wrote most of the space's policies, guidelines, booking standards and objectives, researched comparable collegiate programs, and helped plan day-to-day operations.",
       },
       { when: "2025", what: "The center opened to students." },
     ],
@@ -42,8 +42,23 @@ export const builtAtUF: EsportsItem[] = [
     title: "UF Club Esports",
     role: "Vice President, then President",
     years: "Apr 2022 – Apr 2024",
+    summary: "Two years on the executive board, taking the club from UF Esports to Gator Esports and then to official sport club status.",
+    steps: [
+      {
+        when: "Vice President · Apr 2022 – Apr 2023",
+        what: "Led the rebrand from UF Esports to Gator Esports and secured official recognition. Designed and procured the club's first jersey line. Brought the club into Gen.G's collegiate program, opening industry contacts and funding.",
+      },
+      {
+        when: "President · Apr 2023 – Apr 2024",
+        what: "Ran business relations, brand identity and risk management. Led the move to official sport club status, adding new games and players.",
+      },
+    ],
+  },
+  {
+    title: "Gator Esports × Digital Worlds League of Legends showmatch",
+    role: "Organizer, as UF Club Esports President",
     summary:
-      "Led the club through its rebrand from UF Esports to Gator Esports, directing branding, risk management, and partnerships with organizations like Gen.G.",
+      "A best-of-five League of Legends match between UF and Texas A&M, broadcast live from the Digital Worlds PICT Auditorium.",
   },
   {
     title: "Gator Nation Game Play",
@@ -54,7 +69,8 @@ export const builtAtUF: EsportsItem[] = [
   },
   {
     title: "Gen.G × Idahoan Foods campus activation",
-    role: "Event support, with Gen.G",
+    role: "Product Ambassador (contract), Gen.G",
+    years: "Nov 2024",
     summary:
       "Gen.G, a UF Club Esports partner, asked me to help bring their partner Idahoan Foods to campus. I researched and pitched ideas, then helped Gen.G set up a marketing activation for Idahoan's Shreds product the weekend before the LSU football game.",
   },
@@ -62,7 +78,8 @@ export const builtAtUF: EsportsItem[] = [
     title: "UF RecSports Esports",
     role: "Esports Intern",
     years: "Aug 2024 – Dec 2024",
-    summary: "Ran esports intramurals and tournaments, increasing student involvement by 400%.",
+    summary:
+      "Ran esports intramurals and tournaments, and worked with UF's Division of Student Life to promote them, increasing student involvement by 400%.",
   },
 ];
 
@@ -104,6 +121,11 @@ export const esportsTerms: Term[] = [
   { term: "Esports", meaning: "Organized, competitive video gaming, played in leagues and tournaments." },
   { term: "Intramurals", meaning: "Recreational leagues run by the university and open to any student." },
   { term: "Showmatch", meaning: "An exhibition match played for an audience rather than for league standings." },
+  { term: "Best of five", meaning: "A series that ends when one team wins three games." },
+  {
+    term: "Sport club",
+    meaning: "A student club with official university recognition, which brings formal structure and support.",
+  },
   { term: "EA Sports College Football 25", meaning: "EA's college football video game, released in 2024." },
   { term: "SEC", meaning: "The Southeastern Conference, UF's athletic conference." },
   { term: "Gen.G", meaning: "A professional esports organization that partnered with UF Club Esports." },

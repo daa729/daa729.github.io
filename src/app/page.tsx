@@ -4,8 +4,8 @@ import Facts from "@/components/Facts";
 import { profileLinks } from "@/components/SiteFooter";
 
 const facts = [
-  { value: "21,100", label: "plays of a branded game I built for a national law firm" },
-  { value: "17,468", label: "leads that game captured for the client" },
+  { value: "20,000+", label: "plays of a branded game I built for a national law firm" },
+  { value: "17,000+", label: "leads that game captured for the client" },
   { value: "6", label: "funded VR research projects I built scenes for" },
   { value: "$2M", label: "Gator Esports Center, which I helped take from petition to opening" },
 ];
@@ -34,8 +34,8 @@ export default function Home() {
             <p>
               I&apos;m a Unity developer on Multi Image Group&apos;s Interactive team. I design and deploy real-time
               interactive apps and web experiences for brand activations, the live marketing events where people
-              interact with a brand in person. One branded game I built has been played 21,100 times and captured
-              17,468 leads for its client.
+              interact with a brand in person. One branded game I built has been played more than 20,000 times and captured
+              more than 17,000 leads for its client.
             </p>
             <p>
               Before that, I spent nearly four years as a software engineer at the University of Florida&apos;s Rinker

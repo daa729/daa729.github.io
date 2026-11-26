@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
     highlights: [
       "Design and deploy real-time interactive applications and web experiences that power live brand activations for national enterprise clients.",
       "Work across the full technical stack, from IT infrastructure to 3D rendering, content management, and gamified engagement tools, turning creative concepts into reliable, event-ready software.",
-      "Built a branded game for a national personal-injury law firm: 21,100 plays and 17,468 leads captured.",
+      "Built a branded game for a national personal-injury law firm: 20,000+ plays and 17,000+ leads captured.",
       "Collaborate with clients throughout production to shape design direction and technical execution for high-visibility events.",
     ],
   },

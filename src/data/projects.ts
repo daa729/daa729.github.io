@@ -9,25 +9,16 @@ export type ClientProject = {
   stat?: string;
 };
 
-/** The featured client build, shown as a case study with its real numbers. */
+/** The featured client build, shown as a case study with rounded headline numbers. */
 export const brandedGame = {
   title: "Branded Game",
   client: "National personal-injury law firm",
   summary:
-    "A branded game built for the firm's live brand activations and online audience. Players sign up to play, so the game doubles as a lead-capture tool for the client.",
+    "A branded game built for the firm's live brand activations and online audience, played on the web and on on-site setups at events. Players sign up to play, so the game doubles as a lead-capture tool for the client.",
   headline: [
-    { value: "21,100", label: "total plays" },
-    { value: "17,468", label: "leads captured" },
-    { value: "46.2%", label: "of leads opted in to marketing (8,068 people)" },
+    { value: "20,000+", label: "plays" },
+    { value: "17,000+", label: "leads captured for the client" },
   ],
-  /** Where the 21,100 plays happened. */
-  channels: [
-    { label: "Web", value: 19915 },
-    { label: "Event trailer", value: 750 },
-    { label: "Booth / tent", value: 385 },
-    { label: "Suitcase kiosk", value: 50 },
-  ],
-  guestPlays: 173,
 };
 
 export const clientProjects: ClientProject[] = [
@@ -54,20 +45,6 @@ export const clientTerms: Term[] = [
     meaning: "A live marketing event where people interact with a brand in person, such as a booth or a game.",
   },
   { term: "Lead", meaning: "A player who filled in the sign-up form, giving the client a contact to follow up with." },
-  {
-    term: "Marketing opt-in",
-    meaning: "A lead who also agreed to receive the client's marketing messages.",
-  },
-  {
-    term: "Guest play (walk-up QR)",
-    meaning: "Someone who scanned a QR code at the event and played without filling in the form.",
-  },
-  { term: "Web", meaning: "Plays in a browser on the player's own phone or computer." },
-  {
-    term: "Event trailer, booth / tent, suitcase kiosk",
-    meaning:
-      "The on-site setups the game ran on at events: a branded trailer, an exhibit booth or tent, and a portable kiosk that packs into a case.",
-  },
 ];
 
 /* ---------- Research (UF Rinker School of Construction Management) ---------- */
